@@ -12,7 +12,7 @@ const Home = () => {
           onClick={() => {
             const senddata = async () => {
               try {
-                let users = await fetch("http://localhost:8000/api/user", {
+                let users = await fetch("https://cointab-ydy5.onrender.com/api/user", {
                   method: "POST",
                 });
                 users =await users.json();
@@ -31,7 +31,7 @@ const Home = () => {
           onClick={() => {
             const deletedata = async () => {
               try {
-                let users = await fetch("http://localhost:8000/api/delete", {
+                let users = await fetch("https://cointab-ydy5.onrender.com/api/delete", {
                   method: "DELETE",
                 });
               } catch (error) {
@@ -48,7 +48,7 @@ const Home = () => {
           onClick={() => {
             const getallData = async () => {
               try {
-                let users = await fetch("http://localhost:8000/api/detail", {
+                let users = await fetch("https://cointab-ydy5.onrender.com/api/detail", {
                   method: "GET",
                 });
                 users = await users.json();
