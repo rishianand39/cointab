@@ -32,14 +32,14 @@ router.delete("/delete", async (req, res) => {
   }
 });
 
-router.get("/detail", async (req, res) => {
+router.get("/", async (req, res) => {
     
   try {
     let data=await UserModel.find();
 
     return res.status(200).json(data)
   } catch (error) {
-    return res.status(400).json(error.message);
+    return res.status(500).json(error.message);
   }
 });
 

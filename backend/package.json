@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon src/server.js",
-    "start": "node src/server.js",
-    "echo": "echo success"
+    "server": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "build": "echo success"
   },
   "author": "",
   "license": "ISC",
