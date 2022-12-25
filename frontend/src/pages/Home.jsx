@@ -17,6 +17,7 @@ const Home = () => {
                 });
                 users =await users.json();
                 console.log(users);
+                window.alert("users added successfully")
               } catch (error) {
                 console.log(error);
               }
@@ -34,6 +35,7 @@ const Home = () => {
                 let users = await fetch("https://cointab-ydy5.onrender.com/api/delete", {
                   method: "DELETE",
                 });
+                window.alert("users deleted successfully")
               } catch (error) {
                 console.log(error);
               }
@@ -48,10 +50,11 @@ const Home = () => {
           onClick={() => {
             const getallData = async () => {
               try {
-                let users = await fetch("https://cointab-ydy5.onrender.com/api/detail", {
+                let users = await fetch("https://cointab-ydy5.onrender.com/api", {
                   method: "GET",
                 });
                 users = await users.json();
+                console.log(users)
                 localStorage.setItem("users", JSON.stringify(users));
                 navigate("/users")
               } catch (error) {
